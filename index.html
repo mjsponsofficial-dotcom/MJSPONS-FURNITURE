@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mj Spons | Toko Furniture</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -27,5 +27,17 @@
     <p>© 2025 Mj Spons</p>
     <a href="https://www.tiktok.com/@mjspons.official" target="_blank">TikTok</a>
   </footer>
+  <script>
+  const elements = document.querySelectorAll('.fade-in, .produk-item, .about, form');
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+      const pos = el.getBoundingClientRect().top;
+      if (pos < windowHeight - 100) el.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // supaya muncul langsung saat halaman dibuka
+</script>
 </body>
 </html>
