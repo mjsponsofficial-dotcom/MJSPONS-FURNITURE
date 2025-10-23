@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produk - Mj Spons</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,32 +20,44 @@
   <section class="produk-list fade-in">
     <h2>Katalog Produk</h2>
     <div class="produk-grid">
-      <div class="produk-item fade-in">
-    <img src="assets/images/sofa-turki.jpg" alt="Sofa Turki Elegan">
+  <div class="produk-item fade-in">
+    <img src="sofa-turki.jpg" alt="Sofa Turki Elegan">
     <h3>Sofa Turki Elegan</h3>
     <p>Sofa empuk dengan desain premium — tampil elegan di ruang tamu Anda.</p>
     <a href="https://wa.me/6285607034413" class="btn">Pesan via WhatsApp</a>
   </div>
-      <div class="produk-item">
-        <div class="img-placeholder"></div>
-        <h3>Kasur Busa Premium</h3>
-        <p>Empuk, awet, dan cocok untuk tidur berkualitas.</p>
-        <a href="https://wa.me/6285607034413" class="btn">Pesan via WhatsApp</a>
-      </div>
-      <div class="produk-item">
-        <div class="img-placeholder"></div>
-        <h3>Lemari Plastik Serbaguna</h3>
-        <p>Ringan tapi kuat, cocok untuk semua ruangan.</p>
-        <a href="https://wa.me/6285607034413" class="btn">Pesan via WhatsApp</a>
-      </div>
-    </div>
+
+  <div class="produk-item fade-in">
+    <img src="assets/images/kasur-busa.jpg" alt="Kasur Busa Bigland">
+    <h3>Kasur Busa Premium</h3>
+    <p>Kasur busa dengan motif elegan, empuk dan awet untuk kenyamanan tidur.</p>
+    <a href="https://wa.me/6285607034413" class="btn">Pesan via WhatsApp</a>
+  </div>
+
+  <div class="produk-item fade-in">
+    <img src="assets/images/springbed.jpg" alt="Springbed Mewah">
+    <h3>Springbed Modern</h3>
+    <p>Desain mewah dengan sandaran kulit, menambah kesan elegan di kamar Anda.</p>
+    <a href="https://wa.me/6285607034413" class="btn">Pesan via WhatsApp</a>
+  </div>
+</div>
   </section>
 
   <footer>
     <p>© 2025 Mj Spons</p>
     <a href="https://www.tiktok.com/@mjspons.official" target="_blank">TikTok</a>
   </footer>
+  <script>
+  const elements = document.querySelectorAll('.fade-in, .produk-item, .about, form');
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+      const pos = el.getBoundingClientRect().top;
+      if (pos < windowHeight - 100) el.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // supaya muncul langsung saat halaman dibuka
+</script>
 </body>
-
 </html>
-
